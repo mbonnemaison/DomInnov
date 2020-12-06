@@ -3,6 +3,7 @@
 import datetime
 import dateutil.parser as p
 import csv
+import sys
 
 
 def read_data(path):
@@ -35,5 +36,5 @@ def analyze_data(rows):
     print("total off time: {}".format(off_total))
 
 
-rows = read_data('data_dec_6_2020.csv')
+rows = read_data(sys.argv[1])
 analyze_data(rows)
